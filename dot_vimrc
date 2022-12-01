@@ -29,3 +29,6 @@ au BufNewFile,BufRead *.py
     set foldmethod=indent
     set foldlevel=99
     nnoremap <space> za
+
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+

@@ -8,3 +8,6 @@ let g:ale_completion_enabled = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] [%severity%] %code: %%s'
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
