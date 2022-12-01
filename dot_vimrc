@@ -1,0 +1,31 @@
+set hidden
+set nocp
+
+call plug#begin()
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'vim-airline/vim-airline'
+Plug 'takac/vim-hardtime'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+let g:hardtime_default_on = 1
+
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+au BufNewFile,BufRead *.py 
+    set foldmethod=indent
+    set foldlevel=99
+    nnoremap <space> za
