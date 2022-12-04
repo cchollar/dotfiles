@@ -1,5 +1,7 @@
 set hidden
 set nocp
+set showcmd
+set relativenumber number
 
 call plug#begin()
 Plug 'junegunn/fzf.vim'
