@@ -14,6 +14,8 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 nnoremap <silent> <C-f> :Files<CR>
