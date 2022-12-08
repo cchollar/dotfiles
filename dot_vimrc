@@ -2,6 +2,11 @@ set hidden
 set nocp
 set showcmd
 set relativenumber number
+syntax on
+
+set t_Co=256
+colorscheme onehalfdark
+let g:airline_theme = 'onehalfdark'
 
 call plug#begin()
 Plug 'junegunn/fzf.vim'
@@ -9,6 +14,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline-themes'
@@ -21,8 +27,6 @@ nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-let g:hardtime_default_on = 1
-
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
