@@ -26,6 +26,7 @@ colorscheme onehalfdark
 let g:airline_theme = 'onehalfdark'
 
 call plug#begin()
+Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
