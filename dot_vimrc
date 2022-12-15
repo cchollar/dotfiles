@@ -14,6 +14,7 @@ inoremap <silent><expr> <Tab>
     \ CheckBackspace() ? "\<Tab>" :
     \ coc#refresh()
 
+let g:coc_node_path = "C:\\Program Files\\nodejs\\node.exe"
 
 syntax on
 if exists('+termguicolors')
