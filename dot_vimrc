@@ -3,19 +3,7 @@ set nocp
 set showcmd
 set relativenumber number
 
-" use <tab> to trigger completion and navigate to the next complete item
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_node_path = "C:\\Program Files\\nodejs\\node.exe"
-
-inoremap <silent><expr> <Tab>
-    \ coc#pum#visible() ? coc#pum#next(1) :
-    \ CheckBackspace() ? "\<Tab>" :
-    \ coc#refresh()
-
+inoremap <silent><expr> <Tab> coc#refresh()
 
 syntax on
 if exists('+termguicolors')
