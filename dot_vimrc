@@ -7,16 +7,6 @@ inoremap <expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<Tab>
 
 syntax on
 
-if exists('+termguicolors')
-      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-      set termguicolors
-endif
-set t_Co=256
-
-let g:airline_theme = 'onehalfdark'
-colorscheme onehalfdark
-
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf.vim'
@@ -26,12 +16,20 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+if exists('+termguicolors')
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+endif
+set t_Co=256
+
+let g:airline_theme = 'onehalfdark'
+colorscheme onehalfdark
 
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
