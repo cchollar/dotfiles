@@ -41,6 +41,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+inoremap <C-e> <ESC>A
+
 au BufNewFile,BufRead *.py 
     set foldmethod=indent
     set foldlevel=99
