@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 if exists('+termguicolors')
@@ -49,4 +50,5 @@ au BufNewFile,BufRead *.py
     set foldlevel=99
     nnoremap <space> za
 
+au BufWrite *.py :Autoformat
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
