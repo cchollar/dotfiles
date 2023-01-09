@@ -50,5 +50,7 @@ au BufNewFile,BufRead *.py
     set foldlevel=99
     nnoremap <space> za
 
+let g:autoformat_autoindent = 0
 au BufWrite *.py :Autoformat
+
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
