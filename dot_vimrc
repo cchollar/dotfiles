@@ -5,6 +5,8 @@ set relativenumber number
 
 inoremap <expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<Tab>"
 
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 syntax on
 
 call plug#begin()
