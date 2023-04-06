@@ -119,5 +119,5 @@ export PATH="/home/cchollar/.local/bin:$PATH"
 export PATH="$PATH:/snap/bin"
 
 # setting neovim as an alias for vim
-alias vim = "nvim"
-alias vi = "nvim"
+alias vim="nvim"
+alias vi="nvim"
