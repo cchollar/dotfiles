@@ -115,9 +115,21 @@ fi
 
 # setting poetry env up:
 export PATH="/home/cchollar/.local/bin:$PATH"
+
 # setting snaps env variable:
 export PATH="$PATH:/snap/bin"
+
+
+# checking if NeoVim exists before setting it as default:
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR='nvim'
+else
+    echo "NeoVim is not installed"
+fi
 
 # setting neovim as an alias for vim
 alias vim="nvim"
 alias vi="nvim"
+
+# adding "ll" as a shortcut to "exa -lah"
+alias ll="exa -la"
