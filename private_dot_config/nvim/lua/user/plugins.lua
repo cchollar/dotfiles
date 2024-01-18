@@ -57,6 +57,17 @@ require("lazy").setup({
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
+    
+    --rust-tools
+    --'simrat39/rust-tools.nvim',
+
+    --rustaceanvim
+
+    {
+    'mrcjkb/rustaceanvim',
+    version = '^3', -- Recommended
+    ft = { 'rust' },
+    },
 
     -- DAP
     'mfussenegger/nvim-dap',
@@ -109,7 +120,6 @@ require("lualine").setup {
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("lspconfig").pyright.setup{}
-require("lspconfig").rust_analyzer.setup{}
 
 -- bufferline setup
 -------------------------------------------------------------------------------
@@ -126,6 +136,8 @@ require("nvim-tree").setup {}
 -- nvim tree-sitter setup
 -------------------------------------------------------------------------------
 require("nvim-treesitter.configs").setup{
+  nsure_installed = { "lua", "rust", "toml" },
+  auto_install = true,
   highlight = {
     enable = true,
   }
