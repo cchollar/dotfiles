@@ -136,7 +136,7 @@ require("nvim-tree").setup {}
 -- nvim tree-sitter setup
 -------------------------------------------------------------------------------
 require("nvim-treesitter.configs").setup{
-  nsure_installed = { "lua", "rust", "toml" },
+  ensure_installed = { "lua", "rust", "toml" },
   auto_install = true,
   highlight = {
     enable = true,
